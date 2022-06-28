@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+    <!-- bootstraps -->
+    <link rel="stylesheet" href="./assets/css/plugin/bootstrap.min.css">
+    <!-- main -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/plugin/circliful.css">
+
+
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>InOT : Statistic</title>
+</head>
+
+<body>
+    <!-- nav hp -->
+    <div class="nav-hp" style="display:none" id="nav-hp">
+        <div class="nav-content-hp">
+            <div class="top">
+                <div class="logo" style="display:flex;">
+                    <h1 class="m-0 logo-cont ms-auto">InOT</h1>
+                    <a href="#" class="nav-hide ms-auto" onclick="closing()">
+                        <i class="fa-solid fa-xmark"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="middle">
+                <ul class="ul-no">
+                    <a href="index.html" class="">
+                        <li class="li-co te-side"><span><i class="fa-brands fa-hashnode te-ico"></i>Overview</span>
+                        </li>
+                    </a>
+                    <a href="statistic.html">
+                        <li class="li-co te-side"><span><i class="fa-solid fa-chart-line te-ico"></i>Statistics</span>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li class="li-co te-side"><span><i class="fa-solid fa-list te-ico"></i>List</span></li>
+                    </a>
+                    <a href="#">
+                        <li class="li-co te-side"><span><i class="fa-solid fa-gears te-ico"></i>Setting</span></li>
+                    </a>
+                    <a href="user.html">
+                        <li class="li-co te-side"><span><i class="fa-solid fa-user te-ico"></i>Users</span></li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- end nav hp -->
+    <div class="main">
+        <div class="sidebar-blex">
+            <div class="nav-content">
+                <div class="top">
+                    <div class="logo">
+                        <h1 class="m-0 logo-cont">InOT</h1>
+                    </div>
+                </div>
+                <div class="middle">
+                    <ul class="ul-no">
+                        <a href="index.html">
+                            <li class="li-co te-side"><span><i class="fa-brands fa-hashnode te-ico"></i>Overview</span>
+                            </li>
+                        </a>
+                        <a href="statistic.html">
+                            <li class="li-co te-side"><span><i
+                                        class="fa-solid fa-chart-line te-ico"></i>Statistics</span>
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li class="li-co te-side"><span><i class="fa-solid fa-list te-ico"></i>List</span></li>
+                        </a>
+                        <a href="#">
+                            <li class="li-co te-side"><span><i class="fa-solid fa-gears te-ico"></i>Setting</span></li>
+                        </a>
+                        <a href="#">
+                            <li class="li-co te-side"><span><i class="fa-solid fa-user te-ico"></i>Users</span></li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="navbar-blex">
+            <div class="nav-container">
+                <div class="nav-cont">
+                    <a href="#" class="nav-hide" onclick="showing()">
+                        <i class="fa-solid fa-bars"></i>
+                    </a>
+                    <div class="nav-item">
+                        <div class="item">
+                            <div class="pad">
+                                <div class="icon-nav mr-nav"><i class="fa-solid fa-message"></i>
+                                    <div class="counter">2</div>
+                                </div>
+                                <div class="icon-nav mr-nav"><i class="fa-solid fa-bell"></i>
+                                    <div class="counter">1</div>
+                                </div>
+                                <img class="avatar" src="./assets/image/avatar.png" alt="logo">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- content -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card-cont" style="margin-top:10px;">
+                                <div class="left">
+                                    <div class="dev-title">Device Status</div>
+                                    <div class="d-flex">
+                                        <div id="circle-1" class="circle-ful"></div>
+                                        <div class="d-flex">
+                                            <div class="mt-auto mb-auto">
+                                                <div class="d-flex">
+                                                    <div class="text">
+                                                        <div>
+                                                            <span>Humidity</span>
+                                                            <!-- <span>58 C</span> -->
+                                                        </div>
+                                                        <div>
+                                                            <span>Temperature</span>
+                                                            <!-- <span>31 C</span> -->
+                                                        </div>
+                                                        <div>
+                                                            <span>Power Consumtion</span>
+                                                            <!-- <span>5 W</span> -->
+                                                        </div>
+                                                    </div>
+                                                    <div class="data">
+                                                        <div>
+                                                            <span>: 58 C</span>
+                                                        </div>
+                                                        <div>
+                                                            <span>: 31 C</span>
+                                                        </div>
+                                                        <div>
+                                                            <span>: 5 W</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <span class="m-0 tex-grrr ms-auto">Status</span>
+                                    <span class="m-0 st-online">Connected</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- js -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+    <script src="./assets/js/plugin/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/plugin/pie-chart.js"></script>
+    <script src="./assets/js/plugin/circliful.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <!-- chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+
+    <!-- circliful -->
+    <script>
+        $(document).ready(function () { // 6,32 5,38 2,34
+            $("#circle-1").circliful({
+                animation: 1,
+                animationStep: 5,
+                foregroundBorderWidth: 15,
+                backgroundBorderWidth: 15,
+                percent: 58,
+                textSize: 28,
+                textStyle: 'font-size: 12px;',
+                textColor: '#666',
+                multiPercentage: 1,
+                percentages: [10, 20, 30]
+            });
+        });
+    </script>
+
+</body>
+
+</html>

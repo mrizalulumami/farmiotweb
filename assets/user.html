@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+    <!-- bootstraps -->
+    <link rel="stylesheet" href="./assets/css/plugin/bootstrap.min.css">
+    <!-- main -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/plugin/circliful.css">
+
+
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>InOT : Statistic</title>
+</head>
+
+<body>
+    <!-- nav hp -->
+    <div class="nav-hp" style="display:none" id="nav-hp">
+        <div class="nav-content-hp">
+            <div class="top">
+                <div class="logo" style="display:flex;">
+                    <h1 class="m-0 logo-cont ms-auto">InOT</h1>
+                    <a href="#" class="nav-hide ms-auto" onclick="closing()">
+                        <i class="fa-solid fa-xmark"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="middle">
+                <ul class="ul-no">
+                    <a href="index.html" class="">
+                        <li class="li-co te-side"><span><i class="fa-brands fa-hashnode te-ico"></i>Overview</span>
+                        </li>
+                    </a>
+                    <a href="statistic.html">
+                        <li class="li-co te-side"><span><i class="fa-solid fa-chart-line te-ico"></i>Statistics</span>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li class="li-co te-side"><span><i class="fa-solid fa-list te-ico"></i>List</span></li>
+                    </a>
+                    <a href="#">
+                        <li class="li-co te-side"><span><i class="fa-solid fa-gears te-ico"></i>Setting</span></li>
+                    </a>
+                    <a href="user.html">
+                        <li class="li-co te-side"><span><i class="fa-solid fa-user te-ico"></i>Users</span></li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- end nav hp -->
+    <div class="main">
+        <div class="sidebar-blex">
+            <div class="nav-content">
+                <div class="top">
+                    <div class="logo">
+                        <h1 class="m-0 logo-cont">InOT</h1>
+                    </div>
+                </div>
+                <div class="middle">
+                    <ul class="ul-no">
+                        <a href="index.html">
+                            <li class="li-co te-side"><span><i class="fa-brands fa-hashnode te-ico"></i>Overview</span>
+                            </li>
+                        </a>
+                        <a href="statistic.html">
+                            <li class="li-co te-side"><span><i
+                                        class="fa-solid fa-chart-line te-ico"></i>Statistics</span>
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li class="li-co te-side"><span><i class="fa-solid fa-list te-ico"></i>List</span></li>
+                        </a>
+                        <a href="#">
+                            <li class="li-co te-side"><span><i class="fa-solid fa-gears te-ico"></i>Setting</span></li>
+                        </a>
+                        <a href="#">
+                            <li class="li-co te-side"><span><i class="fa-solid fa-user te-ico"></i>Users</span></li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="navbar-blex">
+            <div class="nav-container">
+                <div class="nav-cont">
+                    <a href="#" class="nav-hide" onclick="showing()">
+                        <i class="fa-solid fa-bars"></i>
+                    </a>
+                    <div class="nav-item">
+                        <div class="item">
+                            <div class="pad">
+                                <div class="icon-nav mr-nav"><i class="fa-solid fa-message"></i>
+                                    <div class="counter">2</div>
+                                </div>
+                                <div class="icon-nav mr-nav"><i class="fa-solid fa-bell"></i>
+                                    <div class="counter">1</div>
+                                </div>
+                                <img class="avatar" src="./assets/image/avatar.png" alt="logo">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- content -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card-cont" style="margin-top:10px;">
+                                <div class="left">
+                                    <div class="dev-title">Device Status</div>
+                                    <div class="d-flex">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div id="circle-1" class="circle-ful"></div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="mt-5 mb-5 mar-sing">
+                                                    <div class="d-flex" style="font-size:19px;">
+                                                        <div class="text">
+                                                            <div>
+                                                                <span><b>Humidity</b></span>
+                                                            </div>
+                                                            <div>
+                                                                <span><b>Temperature</b></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ms-2">
+                                                            <div>
+                                                                <span><b>: 58 C</b></span>
+                                                            </div>
+                                                            <div>
+                                                                <span><b>: 31 C</b></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- right -->
+                        <div class="col-md-6">
+                            <div class="card-cont" style="margin-top:10px;">
+                                <div class="container">
+                                    <div class="dev-title">Daily Status</div>
+                                    <canvas id="myChart" class="user-chart-line" height="116"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- table -->
+                <div class="container">
+                    <div class="card bx-shadow" style="margin-top: 10px;">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">No</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Sensor</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>Connected</td>
+                                            <td class="text-center d-flex">
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" role="switch"
+                                                        id="flexSwitchCheckDefault">
+                                                    <label class="form-check-label" for="flexSwitchCheckDefault">Turn On
+                                                        / Off</label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>Not Connected</td>
+                                            <td class="text-center d-flex">
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" role="switch"
+                                                        id="flexSwitchCheckDefault">
+                                                    <label class="form-check-label" for="flexSwitchCheckDefault">Turn On
+                                                        / Off</label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Larry the Bird</td>
+                                            <td>los agnel</td>
+                                            <td>Connected</td>
+                                            <td class="text-center d-flex">
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" role="switch"
+                                                        id="flexSwitchCheckDefault">
+                                                    <label class="form-check-label" for="flexSwitchCheckDefault">Turn On
+                                                        / Off</label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Sensor</th>
+                            <th scope="col">Status</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>Connected</td>
+                            <td class="text-center d-flex">
+                                <a href="#" class="btn-table btn-table-edit"
+                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                    data-bs-custom-class="custom-tooltip" title="Edit"><i
+                                        class="fa-solid fa-pen-to-square"></i></a>
+                                <a href="#" class="btn-table btn-table-delete"
+                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                    data-bs-custom-class="custom-tooltip" title="Delete"><i
+                                        class="fa-solid fa-trash-can"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>Not Connected</td>
+                            <td class="text-center d-flex">
+                                <a href="#" class="btn-table btn-table-edit"
+                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                    data-bs-custom-class="custom-tooltip" title="Edit"><i
+                                        class="fa-solid fa-pen-to-square"></i></a>
+                                <a href="#" class="btn-table btn-table-delete"
+                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                    data-bs-custom-class="custom-tooltip" title="Delete"><i
+                                        class="fa-solid fa-trash-can"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Larry the Bird</td>
+                            <td>los agnel</td>
+                            <td>Connected</td>
+                            <td class="text-center d-flex">
+                                <a href="#" class="btn-table btn-table-edit"
+                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                    data-bs-custom-class="custom-tooltip" title="Edit"><i
+                                        class="fa-solid fa-pen-to-square"></i></a>
+                                <a href="#" class="btn-table btn-table-delete"
+                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                    data-bs-custom-class="custom-tooltip" title="Delete"><i
+                                        class="fa-solid fa-trash-can"></i></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> -->
+
+
+        <!-- js -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+        <script src="./assets/js/plugin/bootstrap.bundle.min.js"></script>
+        <script src="./assets/js/plugin/pie-chart.js"></script>
+        <script src="./assets/js/plugin/circliful.js"></script>
+        <script src="./assets/js/main.js"></script>
+        <!-- chart -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+
+        <!-- circliful -->
+        <script>
+            $(document).ready(function () { // 6,32 5,38 2,34
+                $("#circle-1").circliful({
+                    animation: 1,
+                    animationStep: 5,
+                    foregroundBorderWidth: 15,
+                    backgroundBorderWidth: 15,
+                    percent: 58,
+                    textSize: 28,
+                    textStyle: 'font-size: 12px;',
+                    textColor: '#666',
+                    multiPercentage: 1,
+                    percentages: [10, 20, 30]
+                });
+            });
+
+            $(document).ready(function () { // 6,32 5,38 2,34
+                $("#circle-2").circliful({
+                    animation: 1,
+                    animationStep: 5,
+                    foregroundBorderWidth: 15,
+                    backgroundBorderWidth: 15,
+                    percent: 12,
+                    textSize: 28,
+                    textStyle: 'font-size: 12px;',
+                    textColor: '#666',
+                    multiPercentage: 1,
+                    percentages: [10, 20, 30],
+                    foregroundColor: "#34db58"
+                });
+            });
+        </script>
+
+        <!-- chart -->
+        <script>
+            const ctx = document.getElementById('myChart');
+            const myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu', 'Minggu'],
+                    datasets: [{
+                        label: 'Humidity',
+                        data: [65, 59, 90, 81, 56, 55, 40, 20],
+                        fill: true,
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        borderColor: 'rgb(255, 99, 132)',
+                        pointBackgroundColor: 'rgb(255, 99, 132)',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: 'rgb(255, 99, 132)'
+                    }, {
+                        label: 'Temperature',
+                        data: [28, 48, 40, 19, 96, 27, 100],
+                        fill: true,
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderColor: 'rgb(54, 162, 235)',
+                        pointBackgroundColor: 'rgb(54, 162, 235)',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: 'rgb(54, 162, 235)'
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+    <!-- main css -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/circliful.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <title>IOT : Dashboard</title>
+</head>
+
+<body>
+    <div class="main">
+        <div id="sidebar" class="sidebar">
+            <div class="nav-content">
+                <div class="top">
+                    <div class="logo">
+                        <h1 class="m-0 logo-cont">InOT</h1>
+                    </div>
+                </div>
+                <div class="middle">
+                    <ul class="ul-no">
+                        <li class="li-co te-side"><span><i class="fa-brands fa-hashnode te-ico"></i>Overview</span>
+                        </li>
+                        <li class="li-co te-side"><span><i class="fa-solid fa-chart-line te-ico"></i>Statistics</span>
+                        </li>
+                        <li class="li-co te-side"><span><i class="fa-solid fa-list te-ico"></i>List</span></li>
+                        <li class="li-co te-side"><span><i class="fa-solid fa-gears te-ico"></i>Setting</span></li>
+                        <li class="li-co te-side"><span><i class="fa-solid fa-user te-ico"></i>Users</span></li>
+                    </ul>
+                </div>
+                <!-- <div class="bottom">bottom</div> -->
+            </div>
+        </div>
+        <div class="navbar">
+            <div class="nav-container">
+                <div class="nav-cont">
+                    <div class="search-angin">
+                        <input class="search-box" type="text" placeholder="Search..."><i
+                            class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div class="nav-item">
+                        <div class="item">
+                            <div class="pad">
+                                <div class="icon-nav mr-nav"><i class="fa-solid fa-message"></i>
+                                    <div class="counter">2</div>
+                                </div>
+                                <div class="icon-nav mr-nav"><i class="fa-solid fa-bell"></i>
+                                    <div class="counter">1</div>
+                                </div>
+                                <img class="avatar" src="./assets/image/avatar.png" alt="logo">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- content -->
+                <div class="widget">
+                    <div class="wid-cont">
+                        <div class="card-cont">
+                            <div class="left">
+                                <div class="wi-title">
+                                    <h4 class="m-0">Data Base Verifed</h4>
+                                </div>
+                                <div class="icon-tol">
+                                    <h4 class="m-0"><i class="fa-solid fa-file tex-grrr"></i> 44</h4>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <span class="m-0 tex-grrr">Status</span>
+                                <span class="m-0 st-online">ONLINE</span>
+                            </div>
+                        </div>
+                        <div class="card-cont" style="margin-top: 10px;">
+                            <div class="left">
+                                <h4 class="m-0">Import Data</h4>
+                                <div class="data-import">
+                                    <div class="bgn">
+                                        <img src="https://www.gstatic.com/devrel-devsite/prod/v2325d8c952b9b608081f2b039989eacb0148117feedf74c3efc58771dfb973db/firebase/images/lockup.svg"
+                                            width="20%" alt="firebase">
+                                        <a class="btn-ipm" href="#">Import <i class="fa-solid fa-file-import"></i></a>
+                                    </div>
+                                    <div class="bgn">
+                                        <img src="https://webimages.mongodb.com/_com_assets/cms/kuyjf3vea2hg34taa-horizontal_default_slate_blue.svg?auto=format%252Ccompress"
+                                            width="20%" alt="mongodb">
+                                        <a class="btn-ipm" href="#">Import <i class="fa-solid fa-file-import"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="dropdown-ico">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-bar" style="margin-top:10px; height:282px;">
+                            <h4 class="m-0">Device</h4>
+                            <canvas id="myChart" class="dev-pad" style="position: relative;"></canvas>
+                            <!-- <div id="chart"></div> -->
+                        </div>
+                    </div>
+                    <div class="graph">
+                        <div class="wid-ch">
+                            <div class="dev-ch">
+                                <div class="dev-title">Devices</div>
+                                <section class="pi-mar">
+                                    <div class="pieID pie">
+
+                                    </div>
+                                    <ul class="pieID legend">
+                                        <li>
+                                            <em>PC</em>
+                                            <span>1145</span>
+                                        </li>
+                                        <li>
+                                            <em>Esp 32</em>
+                                            <span>718</span>
+                                        </li>
+                                        <li>
+                                            <em>Arduino</em>
+                                            <span>531</span>
+                                        </li>
+
+                                        <li>
+                                            <em>Esp 8266</em>
+                                            <span>344</span>
+                                        </li>
+                                        <li>
+                                            <em>Raspberry Pi</em>
+                                            <span>868</span>
+                                        </li>
+                                    </ul>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="card-cont" style="margin-top:10px;">
+                            <div class="left">
+                                <div class="dev-title">Device Status</div>
+                                <div class="d-flex">
+                                    <div id="test-circle" class="circle-ful"></div>
+                                    <div class="d-flex">
+                                        <div class="dev-data">
+                                            <div class="post-a">
+                                                <h3 class="data-font">Humidity</h3>
+                                                <h3 class="data-font">Temperature</h3>
+                                                <h3 class="data-font">Power Consumtion</h3>
+                                            </div>
+                                            <div class="post-a">
+                                                <h3 class="data-font">: 50 ºC</h3>
+                                                <h3 class="data-font">: 36 ºC</h3>
+                                                <h3 class="data-font">: 5 W</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <span class="m-0 tex-grrr ml-auto">Status</span>
+                                <span class="m-0 st-online">Connected</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-section">
+                    <div class="table-di">
+                        <table id="customers">
+                            <tr>
+                                <th>Name</th>
+                                <th>Contact</th>
+                                <th>Device</th>
+                            </tr>
+                            <tr>
+                                <td>Alfreds Futterkiste</td>
+                                <td>Maria Anders</td>
+                                <td>Germany</td>
+                            </tr>
+                            <tr>
+                                <td>Berglunds snabbköp</td>
+                                <td>Christina Berglund</td>
+                                <td>Sweden</td>
+                            </tr>
+                            <tr>
+                                <td>Centro comercial Moctezuma</td>
+                                <td>Francisco Chang</td>
+                                <td>Mexico</td>
+                            </tr>
+                            <tr>
+                                <td>Ernst Handel</td>
+                                <td>Roland Mendel</td>
+                                <td>Austria</td>
+                            </tr>
+                            <tr>
+                                <td>Island Trading</td>
+                                <td>Helen Bennett</td>
+                                <td>UK</td>
+                            </tr>
+                            <tr>
+                                <td>Königlich Essen</td>
+                                <td>Philip Cramer</td>
+                                <td>Germany</td>
+                            </tr>
+                            <tr>
+                                <td>Laughing Bacchus Winecellars</td>
+                                <td>Yoshi Tannamuri</td>
+                                <td>Canada</td>
+                            </tr>
+                            <tr>
+                                <td>Magazzini Alimentari Riuniti</td>
+                                <td>Giovanni Rovelli</td>
+                                <td>Italy</td>
+                            </tr>
+                            <tr>
+                                <td>North/South</td>
+                                <td>Simon Crowther</td>
+                                <td>UK</td>
+                            </tr>
+                            <tr>
+                                <td>Paris spécialités</td>
+                                <td>Marie Bertrand</td>
+                                <td>France</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- script -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+        crossorigin="anonymous"></script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+    <script src="./assets/js/pie-chart.js"></script>
+    <script src="./assets/js/circliful.js"></script>
+    <script src="./assets/js/main.js"></script>
+
+    <!-- chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+
+    <!-- circliful -->
+    <script>
+        $(document).ready(function () { // 6,32 5,38 2,34
+            $("#test-circle").circliful({
+                animation: 1,
+                animationStep: 5,
+                foregroundBorderWidth: 15,
+                backgroundBorderWidth: 15,
+                percent: 38,
+                textSize: 28,
+                textStyle: 'font-size: 12px;',
+                textColor: '#666',
+                multiPercentage: 1,
+                percentages: [10, 20, 30]
+            });
+        });
+    </script>
+    <!-- chart -->
+    <script>
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor: [
+                        'rgba(54, 162, 235)',
+                    ],
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                    },
+                    x: {
+                        grid: {
+                            display: false,
+                        }
+                    }
+                }
+            }
+
+        });
+    </script>
+
+</body>
+
+</html>

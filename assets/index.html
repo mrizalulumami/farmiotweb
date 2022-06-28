@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+    <!-- bootstraps -->
+    <link rel="stylesheet" href="./assets/css/plugin/bootstrap.min.css">
+    <!-- main -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/plugin/circliful.css">
+
+
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>InOT : Dashboard</title>
+</head>
+
+<body>
+    <!-- nav hp -->
+    <div class="nav-hp" style="display:none" id="nav-hp">
+        <div class="nav-content-hp">
+            <div class="top">
+                <div class="logo" style="display:flex;">
+                    <h1 class="m-0 logo-cont ms-auto">InOT</h1>
+                    <a href="#" class="nav-hide ms-auto" onclick="closing()">
+                        <i class="fa-solid fa-xmark"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="middle">
+                <ul class="ul-no">
+                    <a href="index.html" class="">
+                        <li class="li-co te-side"><span><i class="fa-brands fa-hashnode te-ico"></i>Overview</span>
+                        </li>
+                    </a>
+                    <a href="statistic.html">
+                        <li class="li-co te-side"><span><i class="fa-solid fa-chart-line te-ico"></i>Statistics</span>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li class="li-co te-side"><span><i class="fa-solid fa-list te-ico"></i>List</span></li>
+                    </a>
+                    <a href="#">
+                        <li class="li-co te-side"><span><i class="fa-solid fa-gears te-ico"></i>Setting</span></li>
+                    </a>
+                    <a href="user.html">
+                        <li class="li-co te-side"><span><i class="fa-solid fa-user te-ico"></i>Users</span></li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- end nav hp -->
+    <div class="main">
+        <div class="sidebar-blex">
+            <div class="nav-content">
+                <div class="top">
+                    <div class="logo">
+                        <h1 class="m-0 logo-cont">InOT</h1>
+                    </div>
+                </div>
+                <div class="middle">
+                    <ul class="ul-no">
+                        <a href="index.html">
+                            <li class="li-co te-side"><span><i class="fa-brands fa-hashnode te-ico"></i>Overview</span>
+                            </li>
+                        </a>
+                        <a href="statistic.html">
+                            <li class="li-co te-side"><span><i
+                                        class="fa-solid fa-chart-line te-ico"></i>Statistics</span>
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li class="li-co te-side"><span><i class="fa-solid fa-list te-ico"></i>List</span></li>
+                        </a>
+                        <a href="#">
+                            <li class="li-co te-side"><span><i class="fa-solid fa-gears te-ico"></i>Setting</span></li>
+                        </a>
+                        <a href="user.html">
+                            <li class="li-co te-side"><span><i class="fa-solid fa-user te-ico"></i>Users</span></li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="navbar-blex">
+            <div class="nav-container">
+                <div class="nav-cont">
+                    <a href="#" class="nav-hide" onclick="showing()">
+                        <i class="fa-solid fa-bars"></i>
+                    </a>
+                    <div class="nav-item">
+                        <div class="item">
+                            <div class="pad">
+                                <div class="icon-nav mr-nav"><i class="fa-solid fa-message"></i>
+                                    <div class="counter">2</div>
+                                </div>
+                                <div class="icon-nav mr-nav"><i class="fa-solid fa-bell"></i>
+                                    <div class="counter">1</div>
+                                </div>
+                                <img class="avatar" src="./assets/image/avatar.png" alt="logo">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- widget -->
+                <div class="widget">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="wid-cont">
+                                <div class="card-cont">
+                                    <div class="left">
+                                        <div class="wi-title">
+                                            <div class="dev-title">Data Base Verifed</div>
+                                        </div>
+                                        <div class="icon-tol">
+                                            <h4 class="m-0 mt-5"><i class="fa-solid fa-file tex-grrr"></i> 44</h4>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <span class="m-0 tex-grrr">Status</span>
+                                        <span class="m-0 st-online">ONLINE</span>
+                                    </div>
+                                </div>
+                                <div class="card-cont" style="margin-top: 10px;">
+                                    <div class="left">
+                                        <div class="dev-title">Import Data</div>
+                                        <div class="data-import">
+                                            <div class="bgn">
+                                                <img src="https://www.gstatic.com/devrel-devsite/prod/v2325d8c952b9b608081f2b039989eacb0148117feedf74c3efc58771dfb973db/firebase/images/lockup.svg"
+                                                    width="20%" alt="firebase">
+                                                <a class="btn-ipm" href="#">Import <i
+                                                        class="fa-solid fa-file-import"></i></a>
+                                            </div>
+                                            <div class="bgn">
+                                                <img src="https://webimages.mongodb.com/_com_assets/cms/kuyjf3vea2hg34taa-horizontal_default_slate_blue.svg?auto=format%252Ccompress"
+                                                    width="20%" alt="mongodb">
+                                                <a class="btn-ipm" href="#">Import <i
+                                                        class="fa-solid fa-file-import"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="dropdown-ico">
+                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mt-fix">
+                            <div class="graph">
+                                <div class="wid-ch">
+                                    <div class="dev-ch">
+                                        <div class="dev-title">Devices</div>
+                                        <section class="pi-mar">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="milet">
+                                                        <div class="pieID pie">
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="milet">
+                                                        <ul class="pieID legend">
+                                                            <li>
+                                                                <em>PC</em>
+                                                                <span>1145</span>
+                                                            </li>
+                                                            <li>
+                                                                <em>Esp 32</em>
+                                                                <span>718</span>
+                                                            </li>
+                                                            <li>
+                                                                <em>Arduino</em>
+                                                                <span>531</span>
+                                                            </li>
+
+                                                            <li>
+                                                                <em>Esp 8266</em>
+                                                                <span>344</span>
+                                                            </li>
+                                                            <li>
+                                                                <em>Raspberry Pi</em>
+                                                                <span>868</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- chart-bar -->
+                <div class="row" style="margin-top:10px;">
+                    <div class="col-12">
+                        <div class="card bx-shadow">
+                            <div class="card-body">
+                                <h4 class="m-0">Device</h4>
+                                <canvas id="myChart" height="70"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- table -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card bx-shadow" style="margin-top:10px;">
+                            <div class="card-body">
+                                <div class="container px-2">
+
+                                    <div class="mb-2 d-flex justify-content-between align-items-center">
+
+                                        <div class="position-relative">
+                                            <span class="position-absolute search-table"><i
+                                                    class="fa fa-search"></i></span>
+                                            <input class="form-control w-100" placeholder="Search by order#, name...">
+                                        </div>
+
+                                        <div class="px-2">
+
+                                            <span>Filters <i class="fa fa-angle-down"></i></span>
+                                            <i class="fa fa-ellipsis-h ms-3"></i>
+                                        </div>
+
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table table-responsive table-borderless">
+
+                                            <thead>
+                                                <tr class="bg-light">
+                                                    <th scope="col" width="5%"><input class="form-check-input"
+                                                            type="checkbox">
+                                                    </th>
+                                                    <th scope="col" width="5%">No</th>
+                                                    <th scope="col" width="20%">Customer</th>
+                                                    <th scope="col" width="20%">Date</th>
+                                                    <th scope="col" width="20%">Purchased</th>
+                                                    <th scope="col" width="10%">Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row"><input class="form-check-input" type="checkbox">
+                                                    </th>
+                                                    <td>12</td>
+                                                    <td><img src="./assets/image/tab-1.png" width="25"> Althan Travis
+                                                    </td>
+                                                    <td>1 Oct, 21</td>
+                                                    <td>Wirecard for figma</td>
+                                                    <td><i class="fa fa-check-circle-o green"></i><span
+                                                            class="ms-1">Paid</span>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <th scope="row"><input class="form-check-input" type="checkbox">
+                                                    </th>
+                                                    <td>14</td>
+                                                    <td><img src="./assets/image/tab-2.png" width="25"> Tomo arvis</td>
+                                                    <td>12 Oct, 21</td>
+                                                    <td>Altroz furry</td>
+                                                    <td><i class="fa fa-dot-circle-o text-danger"></i><span
+                                                            class="ms-1">Failed</span></td>
+                                                </tr>
+
+
+                                                <tr>
+                                                    <th scope="row"><input class="form-check-input" type="checkbox">
+                                                    </th>
+                                                    <td>17</td>
+                                                    <td><img src="./assets/image/tab-1.png" width="25"> Althan Travis
+                                                    </td>
+                                                    <td>1 Nov, 21</td>
+                                                    </td>
+                                                    <td>Apple Macbook air</td>
+                                                    <td><i class="fa fa-check-circle-o green"></i><span
+                                                            class="ms-1">Paid</span>
+                                                </tr>
+
+
+                                                <tr>
+                                                    <th scope="row"><input class="form-check-input" type="checkbox">
+                                                    </th>
+                                                    <td>90</td>
+                                                    <td><img src="./assets/image/tab-2.png" width="25"> Travis head</td>
+                                                    <td>19 Oct, 21</td>
+                                                    <td>Apple Macbook Pro</td>
+                                                    <td><i class="fa fa-check-circle-o green"></i><span
+                                                            class="ms-1">Paid</span>
+                                                    </td>
+                                                </tr>
+
+
+                                                <tr>
+                                                    <th scope="row"><input class="form-check-input" type="checkbox">
+                                                    </th>
+                                                    <td>12</td>
+                                                    <td><img src="./assets/image/tab-1.png" width="25"> Althan Travis
+                                                    </td>
+                                                    <td>1 Oct, 21</td>
+                                                    <td>Wirecard for figma</td>
+                                                    <td><i class="fa fa-check-circle-o green"></i><span
+                                                            class="ms-1">Paid</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- js -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+    <script src="./assets/js/plugin/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/plugin/pie-chart.js"></script>
+    <script src="./assets/js/plugin/circliful.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <!-- chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+
+    <!-- circliful -->
+    <script>
+        $(document).ready(function () { // 6,32 5,38 2,34
+            $("#test-circle").circliful({
+                animation: 1,
+                animationStep: 5,
+                foregroundBorderWidth: 15,
+                backgroundBorderWidth: 15,
+                percent: 38,
+                textSize: 28,
+                textStyle: 'font-size: 12px;',
+                textColor: '#666',
+                multiPercentage: 1,
+                percentages: [10, 20, 30]
+            });
+        });
+    </script>
+    <!-- chart -->
+    <script>
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                datasets: [{
+                    label: 'Data Of Year',
+                    data: [12, 19, 3, 5, 2, 3, 5, 10, 12, 3, 2, 7],
+                    backgroundColor: [
+                        'rgb(54, 162, 235)',
+                    ],
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                    },
+                    x: {
+                        grid: {
+                            display: false,
+                        }
+                    }
+                }
+            }
+
+        });
+    </script>
+
+</body>
+
+</html>
